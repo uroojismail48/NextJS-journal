@@ -1,9 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental:{
-turbopackFileSystemCacheForDev:true,
-  }
+  experimental: {
+    turbopackFileSystemCacheForDev: true,
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.dummyjson.com",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

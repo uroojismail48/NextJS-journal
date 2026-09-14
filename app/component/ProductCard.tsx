@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type Product = {
   id: number;
   title: string;
@@ -34,7 +36,7 @@ function ProductCard({ product }: ProductCardProps) {
 
         {/* Rating */}
         <span className="absolute right-3 top-3 rounded-full bg-black/70 px-3 py-1 text-xs backdrop-blur">
-          ⭐ {product.rating}
+          {product.rating}
         </span>
       </div>
 
@@ -61,9 +63,11 @@ function ProductCard({ product }: ProductCardProps) {
         </div>
 
         {/* Button */}
+     <Link href={`/Products/${product.id}`}>
         <button className="mt-5 w-full rounded-xl bg-white py-3 font-medium text-black transition hover:bg-zinc-200">
           View Product
         </button>
+        </Link>
 
       </div>
     </div>

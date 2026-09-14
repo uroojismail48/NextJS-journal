@@ -4,9 +4,11 @@ export default function Loading() {
     <div className="flex w-full">
     
 
-      <div className="w-3/4 p-4">
-        <div className="h-6 w-62 bg-gray-200 rounded mb-4 animate-pulse" />
-    loading
+      <div className="w-full h-screen flex items-center justify-center text-center
+      
+      ">
+      
+   <h1> loading..</h1>
       </div>
     </div>
   );
